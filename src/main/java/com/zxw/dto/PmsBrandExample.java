@@ -1,4 +1,4 @@
-package com.zxw.mbg.model;
+package com.zxw.dto;
 import java.util.ArrayList;
 import java.util.List;
 

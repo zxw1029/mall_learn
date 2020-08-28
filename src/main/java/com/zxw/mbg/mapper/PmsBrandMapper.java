@@ -1,7 +1,7 @@
 package com.zxw.mbg.mapper;
 
+import com.zxw.dto.PmsBrandExample;
 import com.zxw.mbg.model.PmsBrand;
-import com.zxw.mbg.model.PmsBrandExample;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -22,5 +22,5 @@ public interface PmsBrandMapper {
 
     int updateByPrimaryKey(PmsBrand record);
 
-    List<PmsBrand> selectByExample(PmsBrandExample example);
+    List<PmsBrand> selectByExample(PmsBrandExample pmsBrandExample);
 }
