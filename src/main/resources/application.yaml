@@ -1,5 +1,5 @@
 server:
-  port: 80
+  port: 8080
 
 #数据源
 spring:
@@ -36,3 +36,10 @@ mybatis:
   mapper-locations:
     - classpath:mapper/*.xml  #classpath冒号后无空格
     - classpath:com/**/mapper/*.xml #classpath冒号后无空格
+
+#自定义JWT授权
+jwt:
+  tokenHeader: Authorization #JWT存储的请求头
+  secret: mall_learn_secret #JWT加解密使用的密钥
+  expiration: 604800 #JWT的超期限时间(60*60*24*7)
+  tokenHead: 'Bearer ' #JWT负载中拿到开头

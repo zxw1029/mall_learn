@@ -214,7 +214,7 @@
       </foreach>
     </where>
   </sql>
-  <select id="selectByExample" parameterType="com.zxw.mbg.model.PmsBrandExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.zxw.dto.PmsBrandExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct

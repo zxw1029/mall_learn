@@ -6,6 +6,7 @@ import com.zxw.service.PmsBrandService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -56,9 +57,10 @@ public class PmsBrandController {
     PmsBrandService pmsBrandService;
 
     @ApiOperation(value = "获取全部品牌列表")
-    @ResponseBody
     @RequestMapping(value = "/listAll", method = RequestMethod.GET)
+   // @PreAuthorize("hasAuthority('pms:brand:read')")
     public CommonResult<List<PmsBrand>> getList() {
+        System.out.println("PmsBrandController.getList()");
         return CommonResult.success(pmsBrandService.listAllBrand());
     }
 }
